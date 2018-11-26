@@ -1,7 +1,14 @@
 package com.example.davidarisz.journal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -9,5 +16,26 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    public void toInput (View v){
+        Toast.makeText(this, "Clicked on Button", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), InputActivity.class);
+        startActivity(intent);
+    }
+
+    private class ListViewClickListener implements AdapterView.OnItemClickListener {
+        @Override
+        public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+            // Do something
+        }
+    }
+
+    private class ListViewLongClickListener implements AdapterView.OnItemLongClickListener {
+        @Override
+        public void onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+            // Do something
+            // Return true, see assignment
+        }
     }
 }
