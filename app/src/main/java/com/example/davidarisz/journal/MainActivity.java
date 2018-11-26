@@ -33,9 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     private class ListViewLongClickListener implements AdapterView.OnItemLongClickListener {
         @Override
-        public void onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
+        public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
             // Do something
             // Return true, see assignment
+            return true;
         }
     }
 }
