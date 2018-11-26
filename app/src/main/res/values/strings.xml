@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Journal</string>
+    <string name="list_title">Title</string>
+    <string name="list_timestamp">Timestamp</string>
+    <string name="list_mood">Mood</string>
+    <string name="add_title">Add Title</string>
+    <string name="add_content">Add Content</string>
+    <string name="add_button">Submit Entry!</string>
+    <string name="detail_title">Title</string>
+    <string name="detail_timestamp">Timestamp</string>
+    <string name="detail_mood">Mood</string>
+    <string name="detail_content">Content</string>
 </resources>
