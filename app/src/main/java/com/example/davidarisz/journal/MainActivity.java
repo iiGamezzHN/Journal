@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
+
+        EntryAdapter entryAdapter = new EntryAdapter(this, db.selectAll());
+        ListView listView = (ListView) findViewById(R.id.listView);
+        listView.setAdapter(entryAdapter);
     }
 
     public void toInput (View v){

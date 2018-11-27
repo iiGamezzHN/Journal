@@ -37,15 +37,13 @@ public class EntryDatabase extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    private static EntryDatabase instance;
-
     private EntryDatabase( Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
-
     }
 
-    public static EntryDatabase getInstance (Context c) {
+    private static EntryDatabase instance;
 
+    public static EntryDatabase getInstance (Context c) {
         if (instance != null) {
             return instance;
         }
