@@ -20,7 +20,8 @@
         android:layout_gravity="bottom|end"
         android:clickable="true"
         android:focusable="true"
-        app:srcCompat="@color/colorPrimary"
-        android:onClick="toInput"/>
+        android:onClick="toInput"
+        app:backgroundTint="?attr/colorPrimary"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </android.support.design.widget.CoordinatorLayout>

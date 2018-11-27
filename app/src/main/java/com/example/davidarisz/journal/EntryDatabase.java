@@ -1,6 +1,7 @@
 package com.example.davidarisz.journal;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -38,6 +39,11 @@ public class EntryDatabase extends SQLiteOpenHelper {
 
     private static EntryDatabase instance;
 
+    private EntryDatabase( Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name, factory, version);
+
+    }
+
     public static EntryDatabase getInstance (Context c) {
 
         if (instance != null) {
@@ -49,12 +55,7 @@ public class EntryDatabase extends SQLiteOpenHelper {
         }
     }
 
-    private EntryDatabase( Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
-
-    }
-
-    public selectAll() {
-        getWritableDatabase().rawQuery();
+    public Cursor selectAll() {
+        return getWritableDatabase().rawQuery("select * from entries",null);
     }
 }
