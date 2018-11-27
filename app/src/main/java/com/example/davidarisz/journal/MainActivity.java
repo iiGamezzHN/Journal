@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
     }
 
     public void toInput (View v){
@@ -37,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
             // Do something
-            // Return true, see assignment
             return true;
         }
     }
