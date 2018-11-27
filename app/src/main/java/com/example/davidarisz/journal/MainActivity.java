@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
     public void toInput (View v){
@@ -31,15 +33,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     private class ListViewLongClickListener implements AdapterView.OnItemLongClickListener {
         @Override
         public boolean onItemLongClick(AdapterView<?> adapterView, View view, int position, long id) {
             // Do something
             // Return true, see assignment
-
-            // lala
-
             return true;
         }
     }
