@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:onClick="toDatabase"
+        android:onClick="addEntry"
         android:text="@string/add_button" />
 
 </LinearLayout>

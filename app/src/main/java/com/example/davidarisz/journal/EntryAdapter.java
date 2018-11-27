@@ -20,7 +20,7 @@ public class EntryAdapter extends ResourceCursorAdapter {
         String content = cursor.getColumnName(cursor.getColumnIndex("content"));
         String mood = cursor.getColumnName(cursor.getColumnIndex("mood"));
         String timestamp = cursor.getColumnName(cursor.getColumnIndex("timestamp"));
-        //View v = view.findViewById(); // Wat moet ik hiermee?
+        View v = view.findViewById(); // Wat moet ik hiermee?
 
     }
 }

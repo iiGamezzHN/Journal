@@ -1,5 +1,6 @@
 package com.example.davidarisz.journal;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -55,5 +56,18 @@ public class EntryDatabase extends SQLiteOpenHelper {
 
     public Cursor selectAll() {
         return getWritableDatabase().rawQuery("select * from entries",null);
+    }
+
+    public insert (Entry entry) {
+        getWritableDatabase(); // Probably wrong
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("title","title");
+        contentValues.put("content","content");
+        contentValues.put("mood","mood");
+
+        getWritableDatabase().insert("entries",null,contentValues);
+
+        return;
     }
 }

@@ -12,7 +12,7 @@ public class InputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_input);
     }
 
-    public void toDatabase (View v) {
+    public void addEntry () {
         // Send entry to the databsse
     }
 }
