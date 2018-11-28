@@ -13,6 +13,7 @@
         app:srcCompat="@color/colorAccent" />
 
     <LinearLayout
+        android:id="@+id/entry_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -23,6 +24,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="2"
             android:gravity="center_vertical"
+            android:paddingLeft="8dp"
             android:text="@string/list_title" />
 
         <TextView
@@ -31,6 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
+            android:paddingLeft="8dp"
             android:text="@string/list_timestamp" />
 
         <TextView
@@ -39,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
+            android:paddingLeft="8dp"
             android:text="@string/list_mood" />
 
     </LinearLayout>

@@ -2,7 +2,6 @@ package com.example.davidarisz.journal;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 
 public class InputActivity extends AppCompatActivity {
 
@@ -14,5 +13,9 @@ public class InputActivity extends AppCompatActivity {
 
     public void addEntry () {
         // Send entry to the databsse
+        EntryDatabase.getInstance(getApplicationContext());
+
+
+
     }
 }
