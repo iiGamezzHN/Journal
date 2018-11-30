@@ -10,4 +10,8 @@
     <string name="detail_timestamp">Timestamp</string>
     <string name="detail_mood">Mood</string>
     <string name="detail_content">Content</string>
+    <string name="mood_sad">Sad</string>
+    <string name="mood_dead">Dead</string>
+    <string name="mood_tired">Tired</string>
+    <string name="mood_happy">Happy</string>
 </resources>
