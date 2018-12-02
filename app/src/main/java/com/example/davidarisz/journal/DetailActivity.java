@@ -1,5 +1,6 @@
 package com.example.davidarisz.journal;
 
+import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +29,6 @@ public class DetailActivity extends AppCompatActivity {
         detail_title.setText(string_title);
         detail_content.setText(string_content);
         detail_mood.setText("Mood: " + string_mood);
-        detail_ts.setText("Geschreven op: "+string_ts);
+        detail_ts.setText("Written on: "+string_ts);
     }
 }

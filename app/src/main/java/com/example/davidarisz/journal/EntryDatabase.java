@@ -59,10 +59,6 @@ public class EntryDatabase extends SQLiteOpenHelper {
         return getWritableDatabase().rawQuery("select * from entries",null);
     }
 
-    public Cursor selectRow(int id) {
-        return getWritableDatabase().rawQuery("select * from entries where _id = ?", new String[] { String.valueOf(id) });
-    }
-
     public Long insert (JournalEntry entry) {
         ContentValues contentValues = new ContentValues();
 

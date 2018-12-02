@@ -1,5 +1,6 @@
 package com.example.davidarisz.journal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,10 +28,20 @@ public class InputActivity extends AppCompatActivity {
         String title = editTitle.getText().toString();
         String content = editContent.getText().toString();
 
+        if (title.isEmpty()) {
+            title = "No Title";
+        }
+
+        if (content.isEmpty()) {
+            content = "No Content";
+        }
+
         JournalEntry journalEntry = new JournalEntry(0, title, content, mood, null);
         db.insert(journalEntry);
 
         Toast.makeText(this, "Added entry!", Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
     }
 
     public void buttonSad (View v){

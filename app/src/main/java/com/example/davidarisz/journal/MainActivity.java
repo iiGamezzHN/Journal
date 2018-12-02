@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void toInput (View v){
-        Toast.makeText(this, "Clicked on Button", Toast.LENGTH_LONG).show();
         Intent intent = new Intent(getApplicationContext(), InputActivity.class);
         startActivity(intent);
     }
@@ -47,30 +46,17 @@ public class MainActivity extends AppCompatActivity {
     private class ListViewClickListener implements AdapterView.OnItemClickListener {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-            // Toast.makeText(getApplicationContext(), "Clicked on Button", Toast.LENGTH_LONG).show();
             // Do something
-            Log.d("PositionTag", "The position is: " + position);
             db = EntryDatabase.getInstance(getApplicationContext());
             Cursor cursor = (Cursor) adapterView.getItemAtPosition(position);
-            int entry_id = cursor.getInt(cursor.getColumnIndex("_id"));
 
-            Cursor row = db.selectRow(entry_id);
-
-            String title = "";
-            String content = "";
-            String mood = "";
-            String ts = "";
-
-            if (row.moveToNext()) {
-                Log.d("asdf", "Testing: "+row.getString(3));
-                title = row.getString(1);
-                content = row.getString(2);
-                mood = row.getString(3);
-                ts = row.getString(4);
-            }
+            String title = cursor.getString(cursor.getColumnIndex("title"));
+            String content = cursor.getString(cursor.getColumnIndex("content"));
+            String mood = cursor.getString(cursor.getColumnIndex("mood"));
+            String ts = cursor.getString(cursor.getColumnIndex("ts"));
 
             JournalEntry journalEntry = new JournalEntry(0, title, content, mood, ts);
-//
+
             Intent intent = new Intent(MainActivity.this, DetailActivity.class);
             intent.putExtra("entryTag", journalEntry);
             startActivity(intent);
