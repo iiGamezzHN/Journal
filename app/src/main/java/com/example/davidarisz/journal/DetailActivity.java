@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class DetailActivity extends AppCompatActivity {
@@ -28,7 +29,27 @@ public class DetailActivity extends AppCompatActivity {
 
         detail_title.setText(string_title);
         detail_content.setText(string_content);
-        detail_mood.setText("Mood: " + string_mood);
+        detail_mood.setText(string_mood);
         detail_ts.setText("Written on: "+string_ts);
+
+        ImageView mood_image = findViewById(R.id.detail_pic);
+
+        switch (string_mood) {
+            case "Sad":
+                mood_image.setBackgroundResource(R.drawable.sad);
+                break;
+            case "Dead":
+                mood_image.setBackgroundResource(R.drawable.dead);
+                break;
+            case "Tired":
+                mood_image.setBackgroundResource(R.drawable.tired);
+                break;
+            case "Happy":
+                mood_image.setBackgroundResource(R.drawable.smile);
+                break;
+            default:
+                mood_image.setBackgroundResource(R.drawable.dead);
+                break;
+        }
     }
 }

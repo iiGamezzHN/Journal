@@ -22,14 +22,14 @@ public class EntryAdapter extends ResourceCursorAdapter {
         String ts = cursor.getString(cursor.getColumnIndex("ts"));
 
         TextView title_text = view.findViewById(R.id.list_title);
-        TextView title_moood = view.findViewById(R.id.list_mood);
+        TextView title_mood = view.findViewById(R.id.list_mood);
         TextView title_timestamp = view.findViewById(R.id.list_timestamp);
 
-        ImageView mood_image = view.findViewById(R.id.list_image);
-
         title_text.setText(title);
-        title_moood.setText(mood);
+        title_mood.setText(mood);
         title_timestamp.setText(ts);
+
+        ImageView mood_image = view.findViewById(R.id.list_image);
 
         switch (mood) {
             case "Sad":

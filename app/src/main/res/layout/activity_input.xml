@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InputActivity">
+    tools:context=".InputActivity"
+    android:background="@color/bg">
 
     <EditText
         android:id="@+id/add_title"
@@ -37,37 +38,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="@string/mood_sad"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="buttonSad"
+            android:text="@string/mood_sad"
             app:srcCompat="@drawable/sad" />
 
         <Button
             android:id="@+id/buttonDead"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="@string/mood_dead"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="buttonDead"
+            android:text="@string/mood_dead"
             app:srcCompat="@drawable/dead" />
 
         <Button
             android:id="@+id/buttonTired"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
             android:layout_weight="1"
-            android:text="@string/mood_tired"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="buttonTired"
+            android:text="@string/mood_tired"
             app:srcCompat="@drawable/tired" />
 
         <Button
             android:id="@+id/buttonHappy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
             android:layout_marginEnd="8dp"
             android:layout_weight="1"
-            android:text="@string/mood_happy"
+            android:backgroundTint="@color/colorPrimary"
             android:onClick="buttonHappy"
+            android:text="@string/mood_happy"
             app:srcCompat="@drawable/smile" />
     </LinearLayout>
 
@@ -76,6 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
+        android:backgroundTint="@color/colorPrimary"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="addEntry"

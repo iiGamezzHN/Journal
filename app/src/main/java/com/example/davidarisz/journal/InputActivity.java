@@ -16,6 +16,21 @@ public class InputActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
+
+        if (getIntent().getSerializableExtra("editTag") != null) {
+            final JournalEntry journalEntry = (JournalEntry) getIntent().getSerializableExtra("editTag");
+            String string_title = journalEntry.getTitle();
+            String string_content = journalEntry.getContent();
+            mood = "Your mood was: " + journalEntry.getMood();
+
+            EditText editTitle = findViewById(R.id.add_title);
+            EditText editContent = findViewById(R.id.add_content);
+
+            editTitle.setText(string_title);
+            editContent.setText(string_content);
+
+            Toast.makeText(this, mood, Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void addEntry (View view) {
