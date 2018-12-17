@@ -17,7 +17,7 @@ public class InputActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-        if (getIntent().getSerializableExtra("editTag") != null) {
+        if (getIntent().getSerializableExtra("editTag") != null) { // Use this for editing
             final JournalEntry journalEntry = (JournalEntry) getIntent().getSerializableExtra("editTag");
             String string_title = journalEntry.getTitle();
             String string_content = journalEntry.getContent();
@@ -29,11 +29,16 @@ public class InputActivity extends AppCompatActivity {
             editTitle.setText(string_title);
             editContent.setText(string_content);
 
-            Toast.makeText(this, mood, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, mood, Toast.LENGTH_SHORT).show(); // Show mood that was selected
         }
     }
 
-    public void addEntry (View view) {
+    /**
+     * Takes all the information from the Activity and makes it an entry
+     *
+     * @param view
+     */
+    public void addEntry(View view) {
         // Send entry to the databsse
         EntryDatabase db = EntryDatabase.getInstance(getApplicationContext());
 
@@ -59,19 +64,20 @@ public class InputActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void buttonSad (View v){
+    // Buttons to set the mood
+    public void buttonSad(View v) {
         mood = "Sad";
     }
 
-    public void buttonDead (View v){
+    public void buttonDead(View v) {
         mood = "Dead";
     }
 
-    public void buttonTired (View v){
+    public void buttonTired(View v) {
         mood = "Tired";
     }
 
-    public void buttonHappy (View v){
+    public void buttonHappy(View v) {
         mood = "Happy";
     }
 }

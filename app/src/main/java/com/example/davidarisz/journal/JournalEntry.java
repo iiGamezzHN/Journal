@@ -16,7 +16,7 @@ public class JournalEntry implements Serializable {
         this.timestamp = timestamp;
     }
 
-    // Getters
+    // Getters and setters
     public int getId() {
         return id;
     }

@@ -15,6 +15,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
+        // Get entry from intent
         final JournalEntry journalEntry = (JournalEntry) getIntent().getSerializableExtra("entryTag");
 
         String string_title = journalEntry.getTitle();
@@ -34,6 +35,7 @@ public class DetailActivity extends AppCompatActivity {
 
         ImageView mood_image = findViewById(R.id.detail_pic);
 
+        // Set picture based on selected mood
         switch (string_mood) {
             case "Sad":
                 mood_image.setBackgroundResource(R.drawable.sad);

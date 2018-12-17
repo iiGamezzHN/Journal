@@ -31,6 +31,7 @@ public class EntryAdapter extends ResourceCursorAdapter {
 
         ImageView mood_image = view.findViewById(R.id.list_image);
 
+        // Select image based on what mood was selected
         switch (mood) {
             case "Sad":
                 mood_image.setBackgroundResource(R.drawable.sad);
