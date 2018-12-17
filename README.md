@@ -10,7 +10,7 @@ After creating an entry, you'll be able to view every single one of your entries
 If you want to delete an entry, you simply have to click and hold the entry the menu opens and you can delete it.
 
 You will also be able to <b>edit</b> Journal entries! Simply longclick the entry and a small menu will pop up to ask if you want
-to edit or delete.
+to edit or delete. And while editing or creating an entry the text will stay <b>even if you turn</b> the device.
 
 <img src="doc/main.jpg" width="250"> <img src="doc/input.jpg" width="250">
 <img src="doc/detail.jpg" width="250"> <img src="doc/main_edit.jpg" width="250">
