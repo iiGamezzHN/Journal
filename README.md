@@ -12,5 +12,12 @@ If you want to delete an entry, you simply have to click and hold the entry the 
 You will also be able to <b>edit</b> Journal entries! Simply longclick the entry and a small menu will pop up to ask if you want
 to edit or delete.
 
-<img src="doc/Input.jpg" width="250"> <img src="doc/Main.jpg" width="250">
-<img src="doc/Detail.jpg" width="250">
+<img src="doc/main.jpg" width="250"> <img src="doc/input.jpg" width="250">
+<img src="doc/detail.jpg" width="250"> <img src="doc/main_edit.jpg" width="250">
+<img src="doc/detail.jpg" width="250">
+
+<img src="doc/main_landscape.jpg" width="350">
+
+<img src="doc/detail_landscape.jpg" width="350">
+
+<img src="doc/input_landscape.jpg" width="350">
